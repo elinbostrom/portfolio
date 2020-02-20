@@ -3,6 +3,7 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-family: 'Avenir', serif;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -18,6 +19,78 @@ a {
   visibility: hidden;
 }
 
+.imgWrapper {
+  max-width: 100px;
+  width: 100%;
+  margin: 0 1em;
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.aboutme {
+  -webkit-animation-duration: 0.25s;
+          animation-duration: 0.25s;
+  -webkit-transition-timing-function: ease-in;
+          transition-timing-function: ease-in;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  -webkit-animation-name: fadeIn;
+          animation-name: fadeIn;
+}
+
+@-webkit-keyframes thicker {
+  0% {
+    font-weight: 100;
+  }
+  50% {
+    font-weight: 400;
+  }
+  100% {
+    font-weight: 900;
+  }
+}
+
+@keyframes thicker {
+  0% {
+    font-weight: 100;
+  }
+  50% {
+    font-weight: 400;
+  }
+  100% {
+    font-weight: 900;
+  }
+}
+
+.upAndAway {
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-transition-timing-function: ease-in;
+          transition-timing-function: ease-in;
+  -webkit-animation-name: thicker;
+          animation-name: thicker;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
 header {
   height: 100vh;
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(13, 123, 108, 0.571)), color-stop(50%, rgba(71, 179, 168, 0.577)), to(white)), url(/img/headerpic.png);
@@ -31,7 +104,9 @@ header {
 }
 
 .menubar {
-  background-color: rgba(242, 5, 116, 0.1);
+  background: #93d3cd;
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(147, 211, 205, 0)), to(white));
+  background: linear-gradient(0deg, rgba(147, 211, 205, 0) 0%, white 100%);
   padding: 1.5em 0;
   position: fixed;
   top: 0;
@@ -48,6 +123,7 @@ header {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: menubar;
+  z-index: 20;
 }
 
 .menubar a {
@@ -55,7 +131,13 @@ header {
   text-decoration: none;
   font-weight: 900;
   cursor: pointer;
-  color: lightpink;
+  color: #ff69b4;
+}
+
+.menubar #logo {
+  max-height: 60px;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .menubar a:hover {
@@ -95,23 +177,25 @@ header {
 }
 
 .headerPicture h1 {
-  font-family: 'Cutive Mono', monospace;
-  color: #fff;
-  text-shadow: 2px 2px #000;
-  font-size: 5em;
+  color: #93d3cd;
+  text-shadow: 2px 2px hotpink;
+  font-size: 3.5em;
   text-align: center;
 }
 
-.headerPicture h2 {
-  color: lightpink;
+.headerPicture h1 a {
+  -webkit-text-decoration-line: none;
+          text-decoration-line: none;
+  color: #93d3cd;
+  cursor: unset;
 }
 
 .portfolio {
   text-align: center;
-  background: -webkit-gradient(linear, left bottom, left top, from(white), color-stop(50%, #fcc3fb), to(white));
-  background: linear-gradient(0deg, white 0%, #fcc3fb 50%, white 100%);
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(255, 255, 255, 0)), color-stop(50%, #93d3cd), to(white));
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, #93d3cd 50%, white 100%);
   min-height: 1000px;
-  color: lightpink;
+  color: hotpink;
 }
 
 .portfolio h2 {
@@ -167,27 +251,46 @@ header {
 }
 
 footer {
-  background-color: rgba(242, 5, 116, 0.1);
-  padding: 2em;
+  background: #93d3cd;
+  background: -webkit-gradient(linear, left bottom, left top, from(#93d3cd), to(rgba(250, 250, 250, 0)));
+  background: linear-gradient(0deg, #93d3cd 0%, rgba(250, 250, 250, 0) 100%);
+  padding: 5em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  color: white;
+  color: hotpink;
+  bottom: 0;
 }
 
 footer h2 {
   margin: 1em;
+  font-size: 6vh;
 }
 
 footer a {
   text-decoration: none;
-  color: lightpink;
+  color: hotpink;
+  font-size: 3vh;
+}
+
+footer div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+footer h3 {
+  padding: 2em;
 }
 
 .aboutme {
@@ -200,7 +303,9 @@ footer a {
       grid-template: 550px / 1fr 1fr;
   place-content: center;
   padding: 2em 5em;
-  color: lightpink;
+  color: hotpink;
+  background: -webkit-gradient(linear, left bottom, left top, from(white), color-stop(50%, white));
+  background: linear-gradient(0deg, white 0%, white 50%);
 }
 
 .aboutme__text {
@@ -227,7 +332,7 @@ footer a {
   transition: all ease-in 0.2s;
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
-  color: lightpink;
+  color: hotpink;
 }
 
 .aboutme__picture {

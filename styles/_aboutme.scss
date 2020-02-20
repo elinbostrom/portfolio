@@ -5,7 +5,8 @@
   grid-template: 550px / 1fr 1fr;
   place-content: center;
   padding: 2em 5em;
-  color: lightpink;
+  color: hotpink;
+  background: linear-gradient(0deg, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 50%);
 
   &__text {
     max-width: 300px;
@@ -19,7 +20,7 @@
     button:hover {
       transition: all ease-in 0.2s;
       transform: scale(1.1);
-      color: lightpink;
+      color: hotpink;
     }
   }
 

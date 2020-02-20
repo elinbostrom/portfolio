@@ -5,6 +5,7 @@
   margin: 0;
   box-sizing: border-box;
   font-family: 'Avenir', serif;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -18,4 +19,10 @@ a {
 
 .hide {
   visibility: hidden;
+}
+
+.imgWrapper {
+  max-width: 100px;
+  width: 100%;
+  margin: 0 1em;
 }

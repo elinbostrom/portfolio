@@ -1,0 +1,38 @@
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.aboutme {
+  animation-duration: 0.25s;
+  transition-timing-function: ease-in;
+  animation-fill-mode: both;
+  animation-name: fadeIn;
+}
+
+@keyframes thicker {
+  0% {
+    font-weight: 100;
+  }
+
+  50% {
+    font-weight: 400;
+  }
+
+  100% {
+    font-weight: 900;
+  }
+}
+
+.upAndAway {
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite;
+  transition-timing-function: ease-in;
+  animation-name: thicker;
+  transform: scale(1.2);
+}

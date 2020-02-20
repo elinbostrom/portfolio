@@ -8,24 +8,27 @@
   <link href="https://fonts.googleapis.com/css?family=Cutive+Mono|Heebo:400,700,900|Rock+Salt&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="styles/main.css">
-  <title>Elin Boström</title>
+  <title>Elin Boström - Portfolio</title>
 </head>
 
 <body>
-  <header>
+  <header id="home">
     <nav class="menubar">
-      <a class="menubar__icon" href="#">Elin Boström</a>
-      <a class="menubar__portfolio" href="#">About me</a>
-      <a class="menubar__portfolio" href="#">Portfolio</a>
-      <a class="menubar__contact" href="#">Contact</a>
+      <a class="menubar__icon" href="index.html"><img src="/img/elin.png" alt="elin logo" id="logo"
+          class="imgWrapper"></a>
+      <a class="menubar__portfolio" href="#aboutmeID">About me</a>
+      <a class="menubar__portfolio" href="#portfolioID">Portfolio</a>
+      <a class="menubar__contact" href="#contactID">Contact</a>
     </nav>
     <section class="headerPicture">
-      <h1>Elin Boström</h1>
-      <h2>Frontend Developer student</h2>
+      <h1><a href="#" class="typewrite" data-period="2000"
+          data-type='[ "Hi, Im Elin Boström...", "I am Creative...", "I am a Frontend Developer..."]'>
+          <span class="wrap"></span>
+        </a></h1>
     </section>
   </header>
   <main>
-    <section class="aboutme">
+    <section id="aboutmeID" class="aboutme">
       <div class="aboutme__text">
         <h2>Who am I?</h2>
         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum, ut dicta. Odio, velit! Corrupti esse, odit
@@ -37,7 +40,7 @@
         <h3 class="fullName">Elin Boström</h3>
       </div>
     </section>
-    <section class="portfolio">
+    <section id="portfolioID" class="portfolio">
       <h2>Portfolio</h2>
       <section class="portfolio__masterpieces">
         <a href="https://stupefied-curie-f61ca2.netlify.com/" class="portfolio__first">
@@ -71,10 +74,29 @@
       </section>
     </section>
   </main>
-  <footer>
-    <h2>Portfolio made by Elin Boström</h2>
-    <p>for more information, please <a href="mailto:ebostrom@live.se">contact me.</a></p>
+  <footer id="contactID">
+    <h2>Say hi!</h2>
+    <div>
+      <div class="github">
+        <a href="https://github.com/elinbostrom">
+          <img src="/img/github.png" alt="github" class="imgWrapper">
+        </a>
+      </div>
+      <div class="linkedin">
+        <a href="https://www.linkedin.com/in/elin-bostr%C3%B6m-6a1616109/">
+          <img src="/img/linkedin.png" alt="linkedin" class="imgWrapper">
+        </a>
+      </div>
+      <div class="mail">
+        <a href="mailto:ebostrom@live.se">
+          <img src="/img/mail.png" alt="mail" class="imgWrapper">
+        </a>
+      </div>
+    </div>
+    <h3>Portfolio made by Elin Boström</h3>
+    <a class="upAndAway" href="#home">Let's go up again!</a>
   </footer>
+  <script src="/node_modules/swup/dist/swup.min.js"></script>
   <script src="main.js"></script>
 </body>
 
