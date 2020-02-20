@@ -5,7 +5,6 @@
   margin: 0;
   box-sizing: border-box;
   font-family: 'Avenir', serif;
-  color: lightpink;
 }
 
 body {
@@ -15,4 +14,8 @@ body {
 button,
 a {
   cursor: pointer;
+}
+
+.hide {
+  visibility: hidden;
 }

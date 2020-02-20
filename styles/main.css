@@ -3,7 +3,6 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-family: 'Avenir', serif;
-  color: lightpink;
 }
 
 body {
@@ -13,6 +12,10 @@ body {
 button,
 a {
   cursor: pointer;
+}
+
+.hide {
+  visibility: hidden;
 }
 
 header {
@@ -52,6 +55,7 @@ header {
   text-decoration: none;
   font-weight: 900;
   cursor: pointer;
+  color: lightpink;
 }
 
 .menubar a:hover {
@@ -98,42 +102,68 @@ header {
   text-align: center;
 }
 
-.portfolio {
-  text-align: center;
+.headerPicture h2 {
+  color: lightpink;
 }
 
-.portfolio__categories {
+.portfolio {
+  text-align: center;
+  background: -webkit-gradient(linear, left bottom, left top, from(white), color-stop(50%, #fcc3fb), to(white));
+  background: linear-gradient(0deg, white 0%, #fcc3fb 50%, white 100%);
+  min-height: 1000px;
+  color: lightpink;
+}
+
+.portfolio h2 {
+  padding-top: 2em;
+  font-size: 8vh;
+}
+
+.portfolio__masterpieces {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto;
+      grid-template-columns: auto auto;
+  grid-gap: 1em;
+  max-width: 1200px;
+  width: 100%;
+  margin: 2em auto;
+}
+
+.portfolio__masterpieces .portfolio__first,
+.portfolio__masterpieces .portfolio__second,
+.portfolio__masterpieces .portfolio__third,
+.portfolio__masterpieces .portfolio__four {
+  position: relative;
+}
+
+.portfolio__masterpieces .titleMasterpieces {
+  position: absolute;
+  top: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  min-height: 5em;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-}
-
-.portfolio__categories button {
-  cursor: pointer;
-  background-color: #93d3cd;
-  color: #fff;
-  max-width: 200px;
   width: 100%;
-  height: 35px;
-  border: none;
-  border-radius: 20px;
-  font-weight: 900;
-  margin: 1em;
-  font-size: 18px;
+  height: 100%;
+  z-index: 13;
+  background: #93d3cd;
+  background: -webkit-gradient(linear, left top, left bottom, from(#93d3cd), to(rgba(255, 255, 255, 0)));
+  background: linear-gradient(180deg, #93d3cd 0%, rgba(255, 255, 255, 0) 100%);
+  color: white;
 }
 
-.portfolio__categories button:hover {
-  -webkit-transition: all ease-in 0.5s;
-  transition: all ease-in 0.5s;
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+.portfolio__masterpieces .titleMasterpieces:hover {
+  background: unset;
 }
 
 footer {
@@ -148,10 +178,16 @@ footer {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  color: white;
 }
 
 footer h2 {
   margin: 1em;
+}
+
+footer a {
+  text-decoration: none;
+  color: lightpink;
 }
 
 .aboutme {
@@ -164,6 +200,7 @@ footer h2 {
       grid-template: 550px / 1fr 1fr;
   place-content: center;
   padding: 2em 5em;
+  color: lightpink;
 }
 
 .aboutme__text {
@@ -186,10 +223,11 @@ footer h2 {
 }
 
 .aboutme__text button:hover {
-  -webkit-transition: all ease-in 1s;
-  transition: all ease-in 1s;
+  -webkit-transition: all ease-in 0.2s;
+  transition: all ease-in 0.2s;
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
+  color: lightpink;
 }
 
 .aboutme__picture {
@@ -241,6 +279,8 @@ footer h2 {
 }
 
 .aboutme__picture .fullName:hover::before {
+  -webkit-transition: all ease-in 1s;
+  transition: all ease-in 1s;
   background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(13, 123, 108, 0.201)), color-stop(50%, rgba(71, 179, 168, 0.235)), to(rgba(255, 255, 255, 0.303))), url(/img/20191126-32.jpg);
   background-image: linear-gradient(0deg, rgba(13, 123, 108, 0.201) 0%, rgba(71, 179, 168, 0.235) 50%, rgba(255, 255, 255, 0.303) 100%), url(/img/20191126-32.jpg);
 }

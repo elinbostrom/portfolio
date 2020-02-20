@@ -26,6 +26,7 @@ header {
     text-decoration: none;
     font-weight: 900;
     cursor: pointer;
+    color: lightpink;
   }
 
   a:hover {
@@ -57,5 +58,9 @@ header {
     text-shadow: 2px 2px #000;
     font-size: 5em;
     text-align: center;
+  }
+
+  h2 {
+    color: lightpink;
   }
 }
