@@ -25,6 +25,33 @@ a {
   margin: 0 1em;
 }
 
+.popUp {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 50vw;
+  height: 50vh;
+  background: white;
+  border: 1px solid whitesmoke;
+  z-index: 30;
+  position: fixed;
+  top: 10em;
+  left: 10em;
+  background: #93d3cd;
+  background: -webkit-gradient(linear, left bottom, left top, from(#93d3cd), to(#fafafa));
+  background: linear-gradient(0deg, #93d3cd 0%, #fafafa 100%);
+}
+
 @-webkit-keyframes fadeIn {
   0% {
     opacity: 0;
@@ -93,10 +120,10 @@ a {
 
 header {
   height: 100vh;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(13, 123, 108, 0.571)), color-stop(50%, rgba(71, 179, 168, 0.577)), to(white)), url(/img/headerpic.png);
-  background-image: linear-gradient(180deg, rgba(13, 123, 108, 0.571) 0%, rgba(71, 179, 168, 0.577) 50%, white 100%), url(/img/headerpic.png);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(13, 123, 108, 0.571)), color-stop(50%, rgba(71, 179, 168, 0.577)), to(white)), url(/img/pankaj-patel-SXihyA4oEJs-unsplash.jpg);
+  background-image: linear-gradient(180deg, rgba(13, 123, 108, 0.571) 0%, rgba(71, 179, 168, 0.577) 50%, white 100%), url(/img/pankaj-patel-SXihyA4oEJs-unsplash.jpg);
   background-size: cover;
-  background-position: bottom;
+  background-position: center;
   background-repeat: no-repeat;
   display: -ms-grid;
   display: grid;
@@ -164,16 +191,12 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
 .headerPicture h1 {

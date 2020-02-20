@@ -59,6 +59,53 @@ window.onload = function () {
 };
 
 
+// cv button
+let cvBtn = document.querySelector('.cv');
+
+cvBtn.addEventListener('click', function () {
+  let aboutMe = document.getElementById('aboutmeID');
+  let popUp = document.createElement('div');
+  popUp.className = "popUp";
+
+  let popUpTitle = document.createElement('h1').innerHTML = "Soon you will see all the great things I've done!";
+  let popUpText = document.createElement('p').innerHTML = "Let me know who you are and I will get back to you shortly..."
+  popUp.appendChild(popUpTitle)
+  popUp.appendChild(popUpText)
+
+  let form = document.createElement('form');
+  form.setAttribute('action', 'https://formspree.io/mdoodqpy');
+  form.setAttribute('method', 'POST');
+  form.setAttribute('type', 'submit');
+
+  let name = document.createElement('input');
+  name.setAttribute('type', 'text');
+  name.setAttribute('required', '');
+  name.setAttribute('placeholder', 'Name');
+
+  let company = document.createElement('input');
+  company.setAttribute('type', 'text');
+  company.setAttribute('required', '');
+  company.setAttribute('placeholder', 'Company');
+
+  let mail = document.createElement('input');
+  mail.setAttribute('type', 'email');
+  mail.setAttribute('required', '');
+  mail.setAttribute('name', '_replyto');
+  mail.setAttribute('placeholder', 'Email');
+
+  let submit = document.createElement('input');
+  submit.setAttribute('type', 'submit');
+  submit.setAttribute('value', 'Send');
+
+  form.appendChild(name);
+  form.appendChild(company);
+  form.appendChild(mail);
+  form.appendChild(submit);
+  popUp.appendChild(form)
+  aboutMe.appendChild(popUp);
+})
+
+
 // function for play videos
 function play(masterpiece) {
   masterpiece.setAttribute('autoplay', '');

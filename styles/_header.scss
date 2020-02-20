@@ -1,8 +1,8 @@
 header {
   height: 100vh;
-  background-image: linear-gradient(180deg, rgba(13, 123, 108, 0.571) 0%, rgba(71, 179, 168, 0.577) 50%, rgb(255, 255, 255) 100%), (url(/img/headerpic.png));
+  background-image: linear-gradient(180deg, rgba(13, 123, 108, 0.571) 0%, rgba(71, 179, 168, 0.577) 50%, rgb(255, 255, 255) 100%), (url(/img/pankaj-patel-SXihyA4oEJs-unsplash.jpg));
   background-size: cover;
-  background-position: bottom;
+  background-position: center;
   background-repeat: no-repeat;
   display: grid;
   grid-template-areas:
@@ -56,9 +56,8 @@ header {
 .headerPicture {
   grid-area: headerPicture;
   display: flex;
-  flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
 
   h1 {
     color: #93d3cd;
