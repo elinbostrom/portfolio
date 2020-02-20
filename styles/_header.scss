@@ -1,0 +1,61 @@
+header {
+  height: 100vh;
+  background-image: linear-gradient(180deg, rgba(13, 123, 108, 0.571) 0%, rgba(71, 179, 168, 0.577) 50%, rgb(255, 255, 255) 100%), (url(/img/headerpic.png));
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  display: grid;
+  grid-template-areas:
+    'menubar'
+    'headerPicture';
+}
+
+.menubar {
+  background-color: rgba(242, 5, 116, 0.1);
+  padding: 1.5em 0;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  grid-area: menubar;
+
+  a {
+    padding: 0 1em;
+    text-decoration: none;
+    font-weight: 900;
+    cursor: pointer;
+  }
+
+  a:hover {
+    color: #05F2AF;
+    transition: all ease-in 1;
+    transform: scale(1.1);
+  }
+
+  &__icon {
+    margin-right: auto;
+    margin-left: 1em;
+  }
+
+  &__contact {
+    margin-right: 1em;
+  }
+}
+
+.headerPicture {
+  grid-area: headerPicture;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  h1 {
+    font-family: 'Cutive Mono', monospace;
+    color: #fff;
+    text-shadow: 2px 2px #000;
+    font-size: 5em;
+    text-align: center;
+  }
+}

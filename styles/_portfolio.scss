@@ -1,0 +1,21 @@
+.portfolio {
+  text-align: center;
+
+  &__categories {
+    display: flex;
+    min-height: 5em;
+    align-items: center;
+    justify-content: center;
+
+    button {
+      cursor: pointer;
+      @include buttonStyler(#93d3cd);
+
+      &:hover {
+        transition: all ease-in 0.5s;
+        transform: scale(1.1);
+      }
+    }
+
+  }
+}

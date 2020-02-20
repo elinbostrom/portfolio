@@ -1,0 +1,64 @@
+.aboutme {
+  min-height: 300px;
+  height: 100%;
+  display: grid;
+  grid-template: 550px / 1fr 1fr;
+  place-content: center;
+  padding: 2em 5em;
+
+  &__text {
+    max-width: 300px;
+    width: 100%;
+    place-self: center;
+
+    button {
+      @include buttonStyler(#93d3cd);
+    }
+
+    button:hover {
+      transition: all ease-in 1s;
+      transform: scale(1.1);
+    }
+  }
+
+  &__picture {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .fullName {
+      max-width: 500px;
+      max-height: 500px;
+      height: 100%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      &::before {
+        content: "";
+        max-width: 400px;
+        width: 100%;
+        max-height: 400px;
+        height: 100%;
+        background-image: linear-gradient(0deg, rgba(13, 123, 108, 0.536) 0%, rgba(71, 179, 168, 0.529) 50%, rgba(255, 255, 255, 0.557) 100%), (url(/img/20191126-32sv.jpg));
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        border-radius: 50%;
+        display: inline-block;
+        margin-bottom: 1em;
+
+      }
+
+      &:hover::before {
+        background-image: linear-gradient(0deg, rgba(13, 123, 108, 0.201) 0%, rgba(71, 179, 168, 0.235) 50%, rgba(255, 255, 255, 0.303) 100%), (url(/img/20191126-32.jpg));
+      }
+    }
+
+
+
+  }
+
+}
