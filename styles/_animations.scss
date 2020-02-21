@@ -8,13 +8,6 @@
   }
 }
 
-.aboutme {
-  animation-duration: 0.25s;
-  transition-timing-function: ease-in;
-  animation-fill-mode: both;
-  animation-name: fadeIn;
-}
-
 @keyframes thicker {
   0% {
     font-weight: 100;

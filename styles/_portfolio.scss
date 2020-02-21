@@ -17,11 +17,31 @@
     width: 100%;
     margin: 2em auto;
 
+    @media (max-width: 700px) {
+      grid-template-columns: unset;
+      grid-auto-rows: auto;
+      justify-content: center;
+    }
+
     .portfolio__first,
     .portfolio__second,
     .portfolio__third,
     .portfolio__four {
       position: relative;
+
+      @media (max-width: 350px) {
+        width: 300px;
+        height: 150px;
+        overflow: hidden;
+      }
+
+      video {
+        width: 600px;
+
+        @media (max-width: 400px) {
+          width: 300px;
+        }
+      }
     }
 
     .titleMasterpieces {

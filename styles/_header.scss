@@ -23,6 +23,10 @@ header {
   grid-area: menubar;
   z-index: 20;
 
+  @media (max-width: 700px) {
+    flex-direction: column;
+  }
+
   a {
     padding: 0 1em;
     text-decoration: none;
@@ -47,6 +51,11 @@ header {
   &__icon {
     margin-right: auto;
     margin-left: 1em;
+
+    @media (max-width: 700px) {
+      margin-right: unset;
+      margin-left: unset;
+    }
   }
 
   &__contact {

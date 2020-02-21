@@ -8,6 +8,7 @@
 
 body {
   background: #fff;
+  min-width: 300px;
 }
 
 button,
@@ -177,17 +178,6 @@ a {
   }
 }
 
-.aboutme {
-  -webkit-animation-duration: 0.25s;
-          animation-duration: 0.25s;
-  -webkit-transition-timing-function: ease-in;
-          transition-timing-function: ease-in;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
-  -webkit-animation-name: fadeIn;
-          animation-name: fadeIn;
-}
-
 @-webkit-keyframes thicker {
   0% {
     font-weight: 100;
@@ -254,6 +244,15 @@ header {
   z-index: 20;
 }
 
+@media (max-width: 700px) {
+  .menubar {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 .menubar a {
   padding: 0 1em;
   text-decoration: none;
@@ -280,6 +279,13 @@ header {
 .menubar__icon {
   margin-right: auto;
   margin-left: 1em;
+}
+
+@media (max-width: 700px) {
+  .menubar__icon {
+    margin-right: unset;
+    margin-left: unset;
+  }
 }
 
 .menubar__contact {
@@ -339,11 +345,49 @@ header {
   margin: 2em auto;
 }
 
+@media (max-width: 700px) {
+  .portfolio__masterpieces {
+    -ms-grid-columns: unset;
+        grid-template-columns: unset;
+    grid-auto-rows: auto;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
 .portfolio__masterpieces .portfolio__first,
 .portfolio__masterpieces .portfolio__second,
 .portfolio__masterpieces .portfolio__third,
 .portfolio__masterpieces .portfolio__four {
   position: relative;
+}
+
+@media (max-width: 350px) {
+  .portfolio__masterpieces .portfolio__first,
+  .portfolio__masterpieces .portfolio__second,
+  .portfolio__masterpieces .portfolio__third,
+  .portfolio__masterpieces .portfolio__four {
+    width: 300px;
+    height: 150px;
+    overflow: hidden;
+  }
+}
+
+.portfolio__masterpieces .portfolio__first video,
+.portfolio__masterpieces .portfolio__second video,
+.portfolio__masterpieces .portfolio__third video,
+.portfolio__masterpieces .portfolio__four video {
+  width: 600px;
+}
+
+@media (max-width: 400px) {
+  .portfolio__masterpieces .portfolio__first video,
+  .portfolio__masterpieces .portfolio__second video,
+  .portfolio__masterpieces .portfolio__third video,
+  .portfolio__masterpieces .portfolio__four video {
+    width: 300px;
+  }
 }
 
 .portfolio__masterpieces .titleMasterpieces {
@@ -397,9 +441,21 @@ footer {
   bottom: 0;
 }
 
+@media (max-width: 700px) {
+  footer {
+    text-align: center;
+  }
+}
+
 footer h2 {
   margin: 1em;
   font-size: 6vh;
+}
+
+@media (max-width: 350px) {
+  footer h2 {
+    font-size: 4vh;
+  }
 }
 
 footer a {
@@ -412,6 +468,9 @@ footer div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 footer h3 {
@@ -420,6 +479,16 @@ footer h3 {
 
 footer p {
   padding-bottom: 2em;
+}
+
+@media (max-width: 700px) {
+  footer .linkedin img,
+  footer .github img,
+  footer .mail img,
+  footer .phone img {
+    max-width: 50px;
+    margin: unset;
+  }
 }
 
 .aboutme {
@@ -435,6 +504,23 @@ footer p {
   color: hotpink;
   background: -webkit-gradient(linear, left bottom, left top, from(white), color-stop(50%, white));
   background: linear-gradient(0deg, white 0%, white 50%);
+}
+
+@media (max-width: 700px) {
+  .aboutme {
+    -ms-grid-rows: auto 550px;
+    -ms-grid-columns: 1fr;
+        grid-template: auto 550px / 1fr;
+    padding: unset;
+  }
+}
+
+@media (max-width: 350px) {
+  .aboutme {
+    -ms-grid-rows: auto 400px;
+    -ms-grid-columns: 1fr;
+        grid-template: auto 400px / 1fr;
+  }
 }
 
 .aboutme__text {
@@ -537,8 +623,8 @@ footer p {
 }
 
 .aboutme__picture .fullName:hover::before {
-  -webkit-transition: all ease-in 1s;
-  transition: all ease-in 1s;
+  -webkit-transition: background-image ease-in 1s;
+  transition: background-image ease-in 1s;
   background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(13, 123, 108, 0.201)), color-stop(50%, rgba(71, 179, 168, 0.235)), to(rgba(255, 255, 255, 0.303))), url(/img/20191126-32.jpg);
   background-image: linear-gradient(0deg, rgba(13, 123, 108, 0.201) 0%, rgba(71, 179, 168, 0.235) 50%, rgba(255, 255, 255, 0.303) 100%), url(/img/20191126-32.jpg);
 }

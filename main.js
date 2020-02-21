@@ -60,10 +60,13 @@ window.onload = function () {
 
 
 // cv button
-let cvBtn = document.querySelector('.cv');
+let cv = document.querySelector('.cv');
 
-cvBtn.addEventListener('click', function () {
-  console.log('clicked')
+cv.addEventListener('click', function () {
+  let cvBtn = document.querySelector('.cv');
+  cvBtn.style.animationName = "fadeIn";
+  cvBtn.style.transition = "250ms";
+
   let body = document.querySelector('body');
   body.style.overflowY = 'hidden';
   body.style.height = '100vh';
