@@ -78,7 +78,7 @@ cv.addEventListener('click', function () {
   closeBtn.className = "closeBtn";
   let cross = document.createElement('img');
   cross.className = "imgWrapper";
-  cross.setAttribute('src', "/img/cross.png");
+  cross.setAttribute('src', "./img/cross.png");
   cross.setAttribute('alt', 'close button');
   closeBtn.appendChild(cross);
   popUp.appendChild(closeBtn);
@@ -115,10 +115,12 @@ cv.addEventListener('click', function () {
 
   let name = document.createElement('input');
   name.setAttribute('type', 'text');
+  name.setAttribute('name', 'name');
   name.setAttribute('placeholder', 'Name...');
 
   let company = document.createElement('input');
   company.setAttribute('type', 'text');
+  company.setAttribute('name', 'company');
   company.setAttribute('placeholder', 'Company...');
 
   let mail = document.createElement('input');

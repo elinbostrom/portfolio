@@ -215,8 +215,8 @@ a {
 
 header {
   height: 100vh;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(13, 123, 108, 0.571)), color-stop(50%, rgba(71, 179, 168, 0.577)), to(white)), url(./img/pankaj-patel-SXihyA4oEJs-unsplash.jpg);
-  background-image: linear-gradient(180deg, rgba(13, 123, 108, 0.571) 0%, rgba(71, 179, 168, 0.577) 50%, white 100%), url(./img/pankaj-patel-SXihyA4oEJs-unsplash.jpg);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(13, 123, 108, 0.571)), color-stop(50%, rgba(71, 179, 168, 0.577)), to(white)), url(../img/pankaj-patel-SXihyA4oEJs-unsplash.jpg);
+  background-image: linear-gradient(180deg, rgba(13, 123, 108, 0.571) 0%, rgba(71, 179, 168, 0.577) 50%, white 100%), url(../img/pankaj-patel-SXihyA4oEJs-unsplash.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -619,8 +619,8 @@ footer p {
   width: 100%;
   max-height: 400px;
   height: 100%;
-  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(13, 123, 108, 0.536)), color-stop(50%, rgba(71, 179, 168, 0.529)), to(rgba(255, 255, 255, 0.557))), url(./img/20191126-32sv.jpg);
-  background-image: linear-gradient(0deg, rgba(13, 123, 108, 0.536) 0%, rgba(71, 179, 168, 0.529) 50%, rgba(255, 255, 255, 0.557) 100%), url(./img/20191126-32sv.jpg);
+  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(13, 123, 108, 0.536)), color-stop(50%, rgba(71, 179, 168, 0.529)), to(rgba(255, 255, 255, 0.557))), url(../img/20191126-32sv.jpg);
+  background-image: linear-gradient(0deg, rgba(13, 123, 108, 0.536) 0%, rgba(71, 179, 168, 0.529) 50%, rgba(255, 255, 255, 0.557) 100%), url(../img/20191126-32sv.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -632,8 +632,8 @@ footer p {
 .aboutme__picture .fullName:hover::before {
   -webkit-transition: background-image ease-in 1s;
   transition: background-image ease-in 1s;
-  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(13, 123, 108, 0.201)), color-stop(50%, rgba(71, 179, 168, 0.235)), to(rgba(255, 255, 255, 0.303))), url(./img/20191126-32.jpg);
-  background-image: linear-gradient(0deg, rgba(13, 123, 108, 0.201) 0%, rgba(71, 179, 168, 0.235) 50%, rgba(255, 255, 255, 0.303) 100%), url(./img/20191126-32.jpg);
+  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(13, 123, 108, 0.201)), color-stop(50%, rgba(71, 179, 168, 0.235)), to(rgba(255, 255, 255, 0.303))), url(../img/20191126-32.jpg);
+  background-image: linear-gradient(0deg, rgba(13, 123, 108, 0.201) 0%, rgba(71, 179, 168, 0.235) 50%, rgba(255, 255, 255, 0.303) 100%), url(../img/20191126-32.jpg);
 }
 
 /*# sourceMappingURL=main.css.map */
