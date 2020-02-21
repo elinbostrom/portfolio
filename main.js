@@ -64,9 +64,37 @@ let cvBtn = document.querySelector('.cv');
 
 cvBtn.addEventListener('click', function () {
   console.log('clicked')
+  let body = document.querySelector('body');
+  body.style.overflowY = 'hidden';
+  body.style.height = '100vh';
   let aboutMe = document.getElementById('aboutmeID');
   let popUp = document.createElement('div');
   popUp.className = "popUp";
+
+  let closeBtn = document.createElement('div');
+  closeBtn.className = "closeBtn";
+  let cross = document.createElement('img');
+  cross.className = "imgWrapper";
+  cross.setAttribute('src', "/img/cross.png");
+  cross.setAttribute('alt', 'close button');
+  closeBtn.appendChild(cross);
+  popUp.appendChild(closeBtn);
+
+  // Close when you click on closeBtn
+
+  window.addEventListener('click', function () {
+    if (event.target == aboutMe) {
+      popUp.style.display = 'none';
+      body.style.overflowY = 'unset';
+      body.style.height = 'unset';
+    }
+  });
+
+  closeBtn.addEventListener('click', function () {
+    popUp.style.display = 'none';
+    body.style.overflowY = 'unset';
+    body.style.height = 'unset';
+  })
 
   let popUpText = document.createElement('div');
   let popUpTitle = document.createElement('h1');
@@ -84,19 +112,17 @@ cvBtn.addEventListener('click', function () {
 
   let name = document.createElement('input');
   name.setAttribute('type', 'text');
-  name.setAttribute('required', '');
-  name.setAttribute('placeholder', 'Name');
+  name.setAttribute('placeholder', 'Name...');
 
   let company = document.createElement('input');
   company.setAttribute('type', 'text');
-  company.setAttribute('required', '');
-  company.setAttribute('placeholder', 'Company');
+  company.setAttribute('placeholder', 'Company...');
 
   let mail = document.createElement('input');
   mail.setAttribute('type', 'email');
   mail.setAttribute('required', '');
   mail.setAttribute('name', '_replyto');
-  mail.setAttribute('placeholder', 'Email');
+  mail.setAttribute('placeholder', 'Email... *');
 
   let submit = document.createElement('input');
   submit.setAttribute('type', 'submit');
@@ -108,6 +134,14 @@ cvBtn.addEventListener('click', function () {
   form.appendChild(submit);
   popUp.appendChild(form)
   aboutMe.appendChild(popUp);
+
+  submit.addEventListener('click', function () {
+    let thankYou = document.createElement('p');
+    thankYou.className = 'thankYou';
+    thankYou.innerHTML = "Thank you for showing interest in me";
+    thankYou.style.display = "inline";
+    form.appendChild(thankYou);
+  })
 })
 
 

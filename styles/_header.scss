@@ -29,6 +29,7 @@ header {
     font-weight: 900;
     cursor: pointer;
     color: #ff69b4;
+    text-shadow: 1px 1px #93d3cd;
   }
 
   #logo {
@@ -61,14 +62,16 @@ header {
 
   h1 {
     color: #93d3cd;
-    text-shadow: 2px 2px hotpink;
+    text-shadow: 1.5px 1.5px #93d3cd;
     font-size: 3.5em;
     text-align: center;
 
     a {
       text-decoration-line: none;
-      color: #93d3cd;
+      // color: #93d3cd;
+      color: hotpink;
       cursor: unset;
     }
   }
+
 }

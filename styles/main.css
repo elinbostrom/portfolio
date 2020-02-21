@@ -28,6 +28,72 @@ a {
 .popUp {
   content: '';
   position: fixed;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: auto 0.5fr 1fr;
+  -ms-grid-columns: 1fr;
+      grid-template: auto 0.5fr 1fr / 1fr;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 90vw;
+  height: 80vh;
+  margin: auto;
+  border: 1px solid whitesmoke;
+  border-radius: 30px;
+  z-index: 30;
+  top: 6em;
+  background: #93d3cd;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(147, 211, 204, 0.952)), to(rgba(250, 250, 250, 0.952)));
+  background: linear-gradient(90deg, rgba(147, 211, 204, 0.952) 0%, rgba(250, 250, 250, 0.952) 100%);
+}
+
+.popUp .closeBtn {
+  cursor: pointer;
+}
+
+.popUp .closeBtn img {
+  height: 4em;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  padding-top: 1em;
+}
+
+.popUp div {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.popUp div h1 {
+  font-size: 4vh;
+  font-weight: 900;
+}
+
+.popUp div p {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.popUp form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -41,30 +107,56 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 50vw;
-  height: 50vh;
-  border: 1px solid whitesmoke;
-  z-index: 30;
-  top: 10em;
-  left: 10em;
-  background: #93d3cd;
-  background: -webkit-gradient(linear, left bottom, left top, from(#93d3cd), to(#fafafa));
-  background: linear-gradient(0deg, #93d3cd 0%, #fafafa 100%);
+  width: 70%;
+  height: 100%;
+  margin: auto;
 }
 
-.popUp h1 {
-  font-size: 3vh;
+.popUp form input {
+  max-width: 450px;
+  width: 100%;
+  border: none;
+  margin: 1em 0;
+  height: 3em;
+  padding: 1em;
+  font-family: inherit;
+  color: hotpink;
+  border-radius: 15px;
+  font-weight: 900;
 }
 
-.popUp p {
-  font-size: 16px;
+.popUp form input:focus {
+  border: 2px solid hotpink;
 }
 
-.popUp form {
-  display: -ms-grid;
-  display: grid;
-  grid-auto-rows: -webkit-min-content;
-  grid-auto-rows: min-content;
+.popUp form input:nth-child(4) {
+  max-width: 250px;
+  width: 100%;
+  border: none;
+  color: #fff;
+  background: hotpink;
+  margin: 2em auto 1em auto;
+  font-size: 2vh;
+  cursor: pointer;
+  padding: 0;
+  border-radius: 20px;
+}
+
+.popUp form input:nth-child(4):hover {
+  -webkit-transition: all 250ms;
+  transition: all 250ms;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  color: hotpink;
+  background: #fff;
+  border: 2px solid hotpink;
+}
+
+.popUp form .thankYou {
+  display: none;
+  color: hotpink;
+  font-style: italic;
+  font-weight: 900;
 }
 
 @-webkit-keyframes fadeIn {
@@ -100,9 +192,6 @@ a {
   0% {
     font-weight: 100;
   }
-  50% {
-    font-weight: 400;
-  }
   100% {
     font-weight: 900;
   }
@@ -111,9 +200,6 @@ a {
 @keyframes thicker {
   0% {
     font-weight: 100;
-  }
-  50% {
-    font-weight: 400;
   }
   100% {
     font-weight: 900;
@@ -174,6 +260,7 @@ header {
   font-weight: 900;
   cursor: pointer;
   color: #ff69b4;
+  text-shadow: 1px 1px #93d3cd;
 }
 
 .menubar #logo {
@@ -216,7 +303,7 @@ header {
 
 .headerPicture h1 {
   color: #93d3cd;
-  text-shadow: 2px 2px hotpink;
+  text-shadow: 1.5px 1.5px #93d3cd;
   font-size: 3.5em;
   text-align: center;
 }
@@ -224,7 +311,7 @@ header {
 .headerPicture h1 a {
   -webkit-text-decoration-line: none;
           text-decoration-line: none;
-  color: #93d3cd;
+  color: hotpink;
   cursor: unset;
 }
 
@@ -328,7 +415,11 @@ footer div {
 }
 
 footer h3 {
-  padding: 2em;
+  padding-top: 2em;
+}
+
+footer p {
+  padding-bottom: 2em;
 }
 
 .aboutme {
@@ -347,14 +438,36 @@ footer h3 {
 }
 
 .aboutme__text {
-  max-width: 300px;
   width: 100%;
-  place-self: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: 900;
+}
+
+.aboutme__text h2 {
+  font-size: 7vh;
+}
+
+.aboutme__text p {
+  color: #93d3cd;
+  padding: 1em 4em;
+  text-align: center;
 }
 
 .aboutme__text button {
   background-color: #93d3cd;
-  color: #fff;
+  color: hotpink;
   max-width: 200px;
   width: 100%;
   height: 35px;
@@ -371,6 +484,7 @@ footer h3 {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
   color: hotpink;
+  border: 2px solid hotpink;
 }
 
 .aboutme__picture {
@@ -403,6 +517,7 @@ footer h3 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  color: white;
 }
 
 .aboutme__picture .fullName::before {
