@@ -26,6 +26,8 @@ a {
 }
 
 .popUp {
+  content: '';
+  position: fixed;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -41,15 +43,28 @@ a {
           align-items: center;
   width: 50vw;
   height: 50vh;
-  background: white;
   border: 1px solid whitesmoke;
   z-index: 30;
-  position: fixed;
   top: 10em;
   left: 10em;
   background: #93d3cd;
   background: -webkit-gradient(linear, left bottom, left top, from(#93d3cd), to(#fafafa));
   background: linear-gradient(0deg, #93d3cd 0%, #fafafa 100%);
+}
+
+.popUp h1 {
+  font-size: 3vh;
+}
+
+.popUp p {
+  font-size: 16px;
+}
+
+.popUp form {
+  display: -ms-grid;
+  display: grid;
+  grid-auto-rows: -webkit-min-content;
+  grid-auto-rows: min-content;
 }
 
 @-webkit-keyframes fadeIn {

@@ -63,14 +63,19 @@ window.onload = function () {
 let cvBtn = document.querySelector('.cv');
 
 cvBtn.addEventListener('click', function () {
+  console.log('clicked')
   let aboutMe = document.getElementById('aboutmeID');
   let popUp = document.createElement('div');
   popUp.className = "popUp";
 
-  let popUpTitle = document.createElement('h1').innerHTML = "Soon you will see all the great things I've done!";
-  let popUpText = document.createElement('p').innerHTML = "Let me know who you are and I will get back to you shortly..."
-  popUp.appendChild(popUpTitle)
-  popUp.appendChild(popUpText)
+  let popUpText = document.createElement('div');
+  let popUpTitle = document.createElement('h1');
+  popUpTitle.innerHTML = "Soon you will see all the great things I've done!";
+  let popUpPara = document.createElement('p');
+  popUpPara.innerHTML = "Let me know who you are and I will get back to you shortly...";
+  popUpText.appendChild(popUpTitle);
+  popUpText.appendChild(popUpPara);
+  popUp.appendChild(popUpText);
 
   let form = document.createElement('form');
   form.setAttribute('action', 'https://formspree.io/mdoodqpy');
