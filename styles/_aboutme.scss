@@ -4,7 +4,7 @@
   display: grid;
   grid-template: 550px / 1fr 1fr;
   place-content: center;
-  padding: 2em 5em;
+  padding: 4em 0 0 0;
   color: hotpink;
   background: linear-gradient(0deg, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 50%);
 
@@ -25,9 +25,15 @@
     justify-content: center;
     align-items: center;
     font-weight: 900;
+    padding-left: 4em;
+
+    @media (max-width: 700px) {
+      padding-left: unset;
+    }
 
     h2 {
       font-size: 7vh;
+      text-shadow: 1.5px 1.5px #93d3cd;
     }
 
     p {
@@ -37,13 +43,24 @@
     }
 
     button {
-      @include buttonStyler(#93d3cd);
+      max-width: 250px;
+      width: 100%;
+      height: 40px;
+      border: none;
+      color: #fff;
+      background: hotpink;
+      font-size: 2vh;
+      cursor: pointer;
+      padding: 0;
+      border-radius: 20px;
+      font-weight: 700;
     }
 
     button:hover {
-      transition: all ease-in 0.2s;
-      transform: scale(1.1);
+      transition: all 250ms;
+      transform: scale(1.05);
       color: hotpink;
+      background: #fff;
       border: 2px solid hotpink;
     }
   }

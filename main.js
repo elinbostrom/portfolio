@@ -129,9 +129,10 @@ cv.addEventListener('click', function () {
   mail.setAttribute('name', '_replyto');
   mail.setAttribute('placeholder', 'Email... *');
 
-  let submit = document.createElement('input');
+  let submit = document.createElement('button');
   submit.setAttribute('type', 'submit');
   submit.setAttribute('value', 'Send');
+  submit.textContent = "Send";
 
   form.appendChild(name);
   form.appendChild(company);
