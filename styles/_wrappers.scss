@@ -47,6 +47,14 @@ a {
   background: rgb(147, 211, 205);
   background: linear-gradient(90deg, rgba(147, 211, 204, 0.952) 0%, rgba(250, 250, 250, 0.952) 100%);
 
+  @media (max-width: 700px) {
+    width: 100vw;
+    height: 100vh;
+    border-radius: unset;
+    margin: unset;
+    top: 0;
+  }
+
   .closeBtn {
     cursor: pointer;
 
@@ -71,11 +79,20 @@ a {
     h1 {
       font-size: 4vh;
       font-weight: 900;
+
+      @media (max-width: 450px) {
+        font-size: 4vh;
+        padding: 0 1em;
+      }
     }
 
     p {
       font-size: 16px;
       font-weight: 700;
+
+      @media (max-width: 450px) {
+        padding: 0 1em;
+      }
     }
   }
 
