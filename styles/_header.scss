@@ -1,9 +1,9 @@
 header {
   height: 100vh;
-  background-image: linear-gradient(180deg, rgba(13, 123, 108, 0.571) 0%, rgba(71, 179, 168, 0.577) 40%, rgb(255, 255, 255) 100%), (url(/img/pankaj-patel-SXihyA4oEJs-unsplash.jpg));
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  // background-image: linear-gradient(180deg, rgba(13, 123, 108, 0.571) 0%, rgba(71, 179, 168, 0.577) 40%, rgb(255, 255, 255) 100%), (url(../img/background.png));
+  // background-size: cover;
+  // background-position: center;
+  // background-repeat: no-repeat;
   display: grid;
   grid-template-areas:
     'menubar'
@@ -12,8 +12,8 @@ header {
 }
 
 .menubar {
-  background: rgb(147, 211, 205);
-  background: linear-gradient(0deg, rgba(147, 211, 205, 0) 0%, rgb(255, 255, 255) 100%);
+  background: #ffffff4d;
+  // background: linear-gradient(0deg, rgba(147, 211, 205, 0) 0%, rgb(25, 29, 25) 100%);
   padding: 1.5em 0;
   position: fixed;
   top: 0;
@@ -33,8 +33,9 @@ header {
     text-decoration: none;
     font-weight: 900;
     cursor: pointer;
-    color: #ff69b4;
-    text-shadow: 1px 1px #93d3cd;
+    color: #fff;
+    text-shadow: 1.5px 1.5px rgb(75, 74, 74);
+    // text-shadow: 1px 1px #93d3cd;
   }
 
   #logo {
@@ -44,7 +45,7 @@ header {
   }
 
   a:hover {
-    color: #05F2AF;
+    color: #203620;
     transition: all ease-in 1;
     transform: scale(1.1);
   }
@@ -71,8 +72,8 @@ header {
   align-items: center;
 
   h1 {
-    color: #93d3cd;
-    text-shadow: 1.5px 1.5px #93d3cd;
+    // color: #93d3cd;
+    // text-shadow: 1.5px 1.5px #93d3cd;
     font-size: 3.5em;
     text-align: center;
 
@@ -86,7 +87,8 @@ header {
       // color: #93d3cd;
       font-family: 'Source Code Pro', serif;
       font-weight: 400;
-      color: hotpink;
+      color: #fff;
+      text-shadow: 1.5px 1.5px rgb(75, 74, 74);
       cursor: unset;
     }
   }
@@ -100,8 +102,15 @@ header {
   grid-area: arrowDown;
   animation-name: byeBye;
   animation-delay: 200ms;
-  animation-duration: 10000ms;
+  animation-duration: 15000ms;
   opacity: 0;
+  font-size: 3vh;
+  text-shadow: 1.5px 1.5px rgb(75, 74, 74);
+  text-decoration: none;
+  color: white;
+  font-family: "avenir", serif;
+  font-weight: bold;
+  padding-bottom: 3em;
 
   img {
     width: 2vw;

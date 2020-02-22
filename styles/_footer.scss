@@ -1,12 +1,12 @@
 footer {
-  background: rgb(147, 211, 205);
-  background: linear-gradient(0deg, rgba(147, 211, 205, 1) 0%, rgba(250, 250, 250, 0) 100%);
+  background: rgb(32, 55, 32);
+  background: linear-gradient(0deg, rgb(23, 39, 23) 0%, rgba(13, 22, 13, 1) 100%);
   padding: 1em 0 5em 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  color: hotpink;
+  color: white;
   bottom: 0;
 
   @media (max-width: 700px) {
@@ -16,7 +16,7 @@ footer {
   h2 {
     margin: 1em;
     font-size: 6vh;
-    text-shadow: 1.5px 1.5px #93d3cd;
+    // text-shadow: 1.5px 1.5px #93d3cd;
 
     @media (max-width: 450px) {
       font-size: 4vh;
@@ -26,7 +26,7 @@ footer {
 
   a {
     text-decoration: none;
-    color: hotpink;
+    color: black;
     font-size: 3vh;
   }
 

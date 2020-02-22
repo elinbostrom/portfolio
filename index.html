@@ -6,51 +6,55 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,700|Source+Sans+Pro:400,700&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="styles/main.css">
   <title>Elin Boström - Portfolio</title>
 </head>
 
 <body>
-  <header id="home">
-    <nav class="menubar">
-      <a class="menubar__icon" href="index.html"><img src="./img/elin.png" alt="elin logo" id="logo"
-          class="imgWrapper"></a>
-      <div>
-        <a class="menubar__portfolio" href="#aboutmeID">About me</a>
-        <a class="menubar__portfolio" href="#portfolioID">Portfolio</a>
-        <a class="menubar__contact" href="#contactID">Contact</a>
-      </div>
-    </nav>
-    <section class="headerPicture">
-      <h1><a href="#" class="typewrite" data-period="2000"
-          data-type='[ "Hi, Im Elin Boström...", "I am Creative...", "I am a Frontend Developer..."]'>
-          <span class="wrap"></span>
-        </a></h1>
-    </section>
-    <section class="arrowDown">
-      <a href="#aboutmeID"><img class="arrowDown imgWrapper" data-aos data-aos-anchor-placement="bottom"
-          data-aos-delay="1000" src="./img/pilner.png" alt="arrow down to about me"></a>
-    </section>
-  </header>
-  <main>
-    <section data-aos="fade-right" data-aos-duration="800" id="aboutmeID" class="aboutme">
+  <div class="parallax">
+
+    <header id="home">
+      <nav class="menubar">
+        <a class="menubar__icon" href="index.html"><img src="./img/elin.png" alt="elin logo" id="logo"
+            class="imgWrapper"></a>
+        <div>
+          <a class="menubar__portfolio" href="#aboutmeID">About me</a>
+          <a class="menubar__portfolio" href="#portfolioID">Portfolio</a>
+          <a class="menubar__contact" href="#contactID">Contact</a>
+        </div>
+      </nav>
+      <section class="headerPicture">
+        <h1><a href="#" class="typewrite" data-period="2000"
+            data-type='[ "Hi, Im Elin...", "I am Creative...", "I am a Frontend Developer..."]'>
+            <span class="wrap"></span>
+          </a></h1>
+      </section>
+      <section class="arrowDown">
+        <a href="#aboutmeID" class="arrowDown">Scroll down</a>
+      </section>
+    </header>
+    <section id="aboutmeID" class="aboutme">
       <div data-aos="fade-right" data-aos-delay="900" class="aboutme__text">
         <h2>Who am I?</h2>
         <p>Hi my name is Elin and my biggest hobby right now is to code. I've always loved being creative and last year
-          I realized what I want to work on when I grow up. That is why I am currently studying at Nackademin to become
+          I realized what I want to do when I grow up. That is why I am currently studying at Nackademin to become
           a
           Frontend developer.</p>
         <br>
         <button class="cv">Ask for my CV</button>
       </div>
-      <div class="aboutme__picture">
-        <h3 class="fullName">.</h3>
+      <div data-aos="fade-right" data-aos-duration="800" class="aboutme__picture">
+        <h3 class="fullName"> </h3>
       </div>
     </section>
-    <section data-aos="fade-up" data-aos-delay="200" data-aos-duration="500" id="portfolioID" class="portfolio">
+  </div>
+  <main>
+    <section class="portfolio">
       <h2>Portfolio</h2>
-      <section class="portfolio__masterpieces">
+      <section data-aos="fade-up" data-aos-delay="200" data-aos-duration="500" id="portfolioID"
+        class="portfolio__masterpieces">
         <a href="https://stupefied-curie-f61ca2.netlify.com/" class="portfolio__first">
           <video id="luffarschackVideo" muted loop playsinline autoplay preload="auto"
             src="./mov/luffarshack.mov"></video>
@@ -109,7 +113,7 @@
     </div>
     <h3>Portfolio made by Elin Boström</h3>
     <p>photos are taken from unsplash and by me</p>
-    <a data-aos="zoom-in-up" data-aos-delay="800" class="upAndAway" href="#home"><img class="imgWrapper"
+    <a class="upAndAway" href="#home"><img data-aos="zoom-in-up" data-aos-delay="200" class="imgWrapper"
         src="./img/pilup.png" alt="go up again symbol">
   </footer>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
