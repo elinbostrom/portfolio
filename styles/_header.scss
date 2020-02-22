@@ -36,6 +36,10 @@ header {
     color: #fff;
     text-shadow: 1.5px 1.5px rgb(75, 74, 74);
     // text-shadow: 1px 1px #93d3cd;
+
+    @media (max-width: 700px) {
+      color: black;
+    }
   }
 
   #logo {
@@ -85,11 +89,15 @@ header {
     .wrap {
       text-decoration-line: none;
       // color: #93d3cd;
-      font-family: 'Source Code Pro', serif;
-      font-weight: 400;
+      // font-family: 'Source Code Pro', serif;
+      font-weight: 700;
       color: #fff;
       text-shadow: 1.5px 1.5px rgb(75, 74, 74);
       cursor: unset;
+
+      @media (max-width: 700px) {
+        color: black;
+      }
     }
   }
 
@@ -112,12 +120,7 @@ header {
   font-weight: bold;
   padding-bottom: 3em;
 
-  img {
-    width: 2vw;
-    padding-bottom: 4em;
-
-    @media (max-width: 450px) {
-      width: 5vw;
-    }
+  @media (max-width: 700px) {
+    color: black;
   }
 }

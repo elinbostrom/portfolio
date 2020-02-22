@@ -5,14 +5,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Elin Boström - Portfolio</title>
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,700|Source+Sans+Pro:400,700&display=swap"
     rel="stylesheet">
+  <script src="loader.js"></script>
   <link rel="stylesheet" href="styles/main.css">
-  <title>Elin Boström - Portfolio</title>
+
+
 </head>
 
-<body>
+<body onload="loader();">
   <div class="parallax">
 
     <header id="home">
@@ -123,5 +126,9 @@
     AOS.init();
   </script>
 </body>
+<div class="loader">
+  <div></div>
+  <div></div>
+</div>
 
 </html>
