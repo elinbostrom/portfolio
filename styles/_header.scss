@@ -12,7 +12,7 @@ header {
 }
 
 .menubar {
-  background: #ffffff4d;
+  background: linear-gradient(0deg, rgba(147, 181, 198, 0) 0%, #679392) 100%;
   // background: linear-gradient(0deg, rgba(147, 211, 205, 0) 0%, rgb(25, 29, 25) 100%);
   padding: 1.5em 0;
   position: fixed;
@@ -26,7 +26,7 @@ header {
 
   @media (max-width: 770px) {
     flex-direction: column;
-    background: #0d160d85;
+
   }
 
   a {
@@ -46,7 +46,7 @@ header {
   }
 
   a:hover {
-    color: #203620;
+    color: #748a74;
     transition: all ease-in 1;
     transform: scale(1.1);
   }
@@ -117,6 +117,6 @@ header {
   font-weight: bold;
 
   @media (max-width: 770px) {
-    color: black;
+    align-items: flex-start;
   }
 }

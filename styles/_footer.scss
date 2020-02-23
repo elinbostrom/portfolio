@@ -1,6 +1,6 @@
 footer {
   background: rgb(32, 55, 32);
-  background: linear-gradient(0deg, rgb(23, 39, 23) 0%, rgba(13, 22, 13, 1) 100%);
+  background: linear-gradient(0deg, #93B5C6 0%, #679392) 100%;
   padding: 1em 0 5em 0;
   display: flex;
   flex-direction: column;
@@ -37,10 +37,18 @@ footer {
 
   h3 {
     padding-top: 2em;
+
+    @media (max-width: 450px) {
+      font-size: 2vh;
+    }
   }
 
   p {
     padding-bottom: 2em;
+
+    @media (max-width: 450px) {
+      font-size: 1vh;
+    }
   }
 
   .linkedin,

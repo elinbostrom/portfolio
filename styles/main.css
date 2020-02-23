@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,700|Roboto+Slab&display=swap");
 .parallax,
 main,
 section,
@@ -66,12 +67,12 @@ footer {
   margin: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-family: 'Avenir', serif;
+  font-family: 'Poppins', serif;
   scroll-behavior: smooth;
 }
 
 body {
-  background: #0d160d;
+  background: #679392;
   min-width: 300px;
 }
 
@@ -108,7 +109,8 @@ a {
   height: 100vh;
   z-index: 30;
   top: 0;
-  background: #0d160df5;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(147, 181, 198, 0.938)), to(#679392ed)) 100%;
+  background: linear-gradient(90deg, rgba(147, 181, 198, 0.938) 0%, #679392ed) 100%;
 }
 
 @media (max-width: 770px) {
@@ -218,8 +220,8 @@ a {
   max-width: 250px;
   width: 100%;
   border: none;
-  color: black;
-  background: white;
+  color: white;
+  background: #93B5C6;
   margin: 2em auto 1em auto;
   font-size: 2vh;
   cursor: pointer;
@@ -234,9 +236,8 @@ a {
   transition: all 250ms;
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
-  color: white;
-  background: #0d160d;
-  border: 2px solid #0d160d;
+  color: #93B5C6;
+  background: white;
 }
 
 .popUp form .thankYou {
@@ -247,11 +248,11 @@ a {
 }
 
 .parallax {
-  background: url(../img/background.png), #818181d7;
+  background: url(../img/nicesky.png), #818181d7;
   /* Set a specific height */
   min-height: 100vh;
   /* Create the parallax scrolling effect */
-  background-attachment: fixed;
+  background-attachment: scroll;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -398,7 +399,8 @@ header {
 }
 
 .menubar {
-  background: #ffffff4d;
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(147, 181, 198, 0)), to(#679392)) 100%;
+  background: linear-gradient(0deg, rgba(147, 181, 198, 0) 0%, #679392) 100%;
   padding: 1.5em 0;
   position: fixed;
   top: 0;
@@ -424,7 +426,6 @@ header {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    background: #0d160d85;
   }
 }
 
@@ -444,7 +445,7 @@ header {
 }
 
 .menubar a:hover {
-  color: #203620;
+  color: #748a74;
   -webkit-transition: all ease-in 1;
   transition: all ease-in 1;
   -webkit-transform: scale(1.1);
@@ -537,13 +538,15 @@ header {
 
 @media (max-width: 770px) {
   .arrowDown {
-    color: black;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
   }
 }
 
 .portfolio {
   text-align: center;
-  background: #0d160d;
+  background: #679392;
   min-height: 1000px;
   color: white;
 }
@@ -629,8 +632,8 @@ header {
   height: 100%;
   z-index: 13;
   background: #253325;
-  background: -webkit-gradient(linear, left top, left bottom, from(#1a221a), to(rgba(255, 255, 255, 0)));
-  background: linear-gradient(180deg, #1a221a 0%, rgba(255, 255, 255, 0) 100%);
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(147, 181, 198, 0)), to(#679392)) 100%;
+  background: linear-gradient(0deg, rgba(147, 181, 198, 0) 0%, #679392) 100%;
   color: white;
 }
 
@@ -640,8 +643,8 @@ header {
 
 footer {
   background: #203720;
-  background: -webkit-gradient(linear, left bottom, left top, from(#172717), to(#0d160d));
-  background: linear-gradient(0deg, #172717 0%, #0d160d 100%);
+  background: -webkit-gradient(linear, left bottom, left top, from(#93B5C6), to(#679392)) 100%;
+  background: linear-gradient(0deg, #93B5C6 0%, #679392) 100%;
   padding: 1em 0 5em 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -696,8 +699,20 @@ footer h3 {
   padding-top: 2em;
 }
 
+@media (max-width: 450px) {
+  footer h3 {
+    font-size: 2vh;
+  }
+}
+
 footer p {
   padding-bottom: 2em;
+}
+
+@media (max-width: 450px) {
+  footer p {
+    font-size: 1vh;
+  }
 }
 
 @media (max-width: 770px) {
@@ -788,7 +803,7 @@ footer p {
   padding: 1em 4em;
   text-align: center;
   font-weight: 300;
-  font-family: 'Roboto Slab', serif;
+  font-family: 'Poppins', serif;
   line-height: 160%;
 }
 
@@ -798,13 +813,13 @@ footer p {
   height: 40px;
   border: none;
   color: #fff;
-  background: #0d160d;
+  background: #93B5C6;
   font-size: 2vh;
   cursor: pointer;
   padding: 0;
   border-radius: 20px;
   font-weight: 700;
-  font-family: 'Roboto Slab', serif;
+  font-family: 'Poppins', serif;
 }
 
 .aboutme__text button:hover {
@@ -812,9 +827,8 @@ footer p {
   transition: all 250ms;
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
-  color: #0d160d;
+  color: #93B5C6;
   background: #fff;
-  border: 2px solid #0d160d;
 }
 
 .aboutme__picture {
@@ -859,8 +873,8 @@ footer p {
   width: 100%;
   max-height: 400px;
   height: 100%;
-  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(77, 83, 77, 0.536)), color-stop(50%, rgba(53, 73, 56, 0.529)), to(rgba(102, 102, 102, 0.557))), url(../img/20191126-32.jpg);
-  background-image: linear-gradient(0deg, rgba(77, 83, 77, 0.536) 0%, rgba(53, 73, 56, 0.529) 50%, rgba(102, 102, 102, 0.557) 100%), url(../img/20191126-32.jpg);
+  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(77, 83, 81, 0.287)), color-stop(50%, rgba(76, 119, 106, 0.357)), to(rgba(161, 161, 161, 0.822))), url(../img/20191126-32.jpg);
+  background-image: linear-gradient(0deg, rgba(77, 83, 81, 0.287) 0%, rgba(76, 119, 106, 0.357) 50%, rgba(161, 161, 161, 0.822) 100%), url(../img/20191126-32.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;

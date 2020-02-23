@@ -59,7 +59,7 @@
       padding: 1em 4em;
       text-align: center;
       font-weight: 300;
-      font-family: 'Roboto Slab', serif;
+      font-family: 'Poppins', serif;
       line-height: 160%;
     }
 
@@ -69,21 +69,21 @@
       height: 40px;
       border: none;
       color: #fff;
-      background: #0d160d;
+      background: #93B5C6;
       font-size: 2vh;
       cursor: pointer;
       padding: 0;
       border-radius: 20px;
       font-weight: 700;
-      font-family: 'Roboto Slab', serif;
+      font-family: 'Poppins', serif;
     }
 
     button:hover {
       transition: all 250ms;
       transform: scale(1.05);
-      color: #0d160d;
+      color: #93B5C6;
       background: #fff;
-      border: 2px solid #0d160d;
+      // border: 2px solid #0d160d;
     }
   }
 
@@ -110,7 +110,7 @@
         width: 100%;
         max-height: 400px;
         height: 100%;
-        background-image: linear-gradient(0deg, rgba(77, 83, 77, 0.536) 0%, rgba(53, 73, 56, 0.529) 50%, rgba(102, 102, 102, 0.557) 100%), (url(../img/20191126-32.jpg));
+        background-image: linear-gradient(0deg, rgba(77, 83, 81, 0.287) 0%, rgba(76, 119, 106, 0.357) 50%, rgba(161, 161, 161, 0.822) 100%), (url(../img/20191126-32.jpg));
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
