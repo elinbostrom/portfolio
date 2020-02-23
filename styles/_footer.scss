@@ -9,7 +9,7 @@ footer {
   color: white;
   bottom: 0;
 
-  @media (max-width: 700px) {
+  @media (max-width: 770px) {
     text-align: center;
   }
 
@@ -47,9 +47,9 @@ footer {
   .github,
   .mail,
   .phone {
-    @media (max-width: 700px) {
+    @media (max-width: 770px) {
       img {
-        max-width: 50px;
+        max-width: 30px;
         margin: 0 0.2em;
       }
     }

@@ -6,16 +6,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Elin Boström - Portfolio</title>
+  <script src="loader.js"></script>
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,700|Source+Sans+Pro:400,700&display=swap"
     rel="stylesheet">
-  <script src="loader.js"></script>
   <link rel="stylesheet" href="styles/main.css">
 
 
 </head>
 
-<body onload="loader();">
+<body onload="loader()">
   <div class="parallax">
 
     <header id="home">
@@ -39,7 +39,7 @@
       </section>
     </header>
     <section id="aboutmeID" class="aboutme">
-      <div data-aos="fade-right" data-aos-delay="900" class="aboutme__text">
+      <div data-aos="fade-right" data-aos-delay="500" class="aboutme__text">
         <h2>Who am I?</h2>
         <p>Hi my name is Elin and my biggest hobby right now is to code. I've always loved being creative and last year
           I realized what I want to do when I grow up. That is why I am currently studying at Nackademin to become
@@ -48,7 +48,7 @@
         <br>
         <button class="cv">Ask for my CV</button>
       </div>
-      <div data-aos="fade-right" data-aos-duration="800" class="aboutme__picture">
+      <div data-aos="fade-up" class="aboutme__picture">
         <h3 class="fullName"> </h3>
       </div>
     </section>
@@ -56,9 +56,9 @@
   <main>
     <section class="portfolio">
       <h2>Portfolio</h2>
-      <section data-aos="fade-up" data-aos-delay="200" data-aos-duration="500" id="portfolioID"
-        class="portfolio__masterpieces">
-        <a href="https://stupefied-curie-f61ca2.netlify.com/" class="portfolio__first">
+      <section id="portfolioID" class="portfolio__masterpieces">
+        <a data-aos="fade-up" data-aos-delay="200" data-aos-duration="500"
+          href="https://stupefied-curie-f61ca2.netlify.com/" class="portfolio__first">
           <video id="luffarschackVideo" muted loop playsinline autoplay preload="auto"
             src="./mov/luffarshack.mov"></video>
           <div class="titleMasterpieces">
@@ -66,21 +66,24 @@
             <p class="luffarInnerText">from JavaScript 1 course</p>
           </div>
         </a>
-        <a href="https://wizardly-benz-601c1c.netlify.com/" class="portfolio__second">
+        <a data-aos="fade-up" data-aos-delay="200" data-aos-duration="500"
+          href="https://wizardly-benz-601c1c.netlify.com/" class="portfolio__second">
           <video id="marsVideo" muted loop playsinline autoplay preload="auto" src="./mov/marsonemobile.mov"></video>
           <div class="titleMasterpieces">
             <h3>Mars One - Webpage</h3>
             <p class="marsInnerText">from HTML & CSS course</p>
           </div>
         </a>
-        <a href="https://vsgmvhsam.netlify.com/" class="portfolio__third">
+        <a data-aos="fade-up" data-aos-delay="200" data-aos-duration="500" href="https://vsgmvhsam.netlify.com/"
+          class="portfolio__third">
           <video id="modetiveVideo" muted loop playsinline autoplay preload="auto" src="./mov/modetiv.mov"></video>
           <div class="titleMasterpieces">
             <h3>Modetive - Webshop with localStorage</h3>
             <p class="modetiveInnerText">from JavaScript 2 course</p>
           </div>
         </a>
-        <a href="https://cranky-noether-6b1236.netlify.com/" class="portfolio__four">
+        <a data-aos="fade-up" data-aos-delay="200" data-aos-duration="500"
+          href="https://cranky-noether-6b1236.netlify.com/" class="portfolio__four">
           <video id="travelsonVideo" muted loop playsinline autoplay preload="auto" src="./mov/travelson.mov"></video>
           <div class="titleMasterpieces">
             <h3>Travelson - Webpage</h3>
@@ -93,31 +96,35 @@
   <footer id="contactID">
     <h2>Say hi!</h2>
     <div>
-      <div class="github" data-aos="fade-right" data-aos-delay="350" data-aos-duration="300">
+      <div class="github">
         <a href="https://github.com/elinbostrom">
-          <img src="./img/github.png" alt="github" class="imgWrapper">
+          <img data-aos="fade-right" data-aos-delay="350" data-aos-duration="300" src="./img/github.png" alt="github"
+            class="imgWrapper">
         </a>
       </div>
-      <div class="linkedin" data-aos="fade-right" data-aos-delay="250" data-aos-duration="300">
+      <div class="linkedin">
         <a href="https://www.linkedin.com/in/elin-bostr%C3%B6m-6a1616109/">
-          <img src="./img/linkedin.png" alt="linkedin" class="imgWrapper">
+          <img data-aos="fade-right" data-aos-delay="250" data-aos-duration="300" src="./img/linkedin.png"
+            alt="linkedin" class="imgWrapper">
         </a>
       </div>
-      <div class="mail" data-aos="fade-left" data-aos-delay="250" data-aos-duration="300">
+      <div class="mail">
         <a href="mailto:ebostrom@live.se">
-          <img src="./img/mail.png" alt="mail" class="imgWrapper">
+          <img data-aos="fade-left" data-aos-delay="250" data-aos-duration="300" src="./img/mail.png" alt="mail"
+            class="imgWrapper">
         </a>
       </div>
-      <div class="phone" data-aos="fade-left" data-aos-delay="350" data-aos-duration="300">
+      <div class="phone">
         <a class="phoneIcon" href="tel:+46739257636">
-          <img src="./img/phone.png" alt="phonenumber" class="imgWrapper">
+          <img data-aos="fade-left" data-aos-delay="350" data-aos-duration="300" src="./img/phone.png" alt="phonenumber"
+            class="imgWrapper">
         </a>
       </div>
     </div>
     <h3>Portfolio made by Elin Boström</h3>
     <p>photos are taken from unsplash and by me</p>
     <a class="upAndAway" href="#home"><img data-aos="zoom-in-up" data-aos-delay="200" class="imgWrapper"
-        src="./img/pilup.png" alt="go up again symbol">
+        src="./img/pilup.png" alt="go up again symbol"></a>
   </footer>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="/node_modules/swup/dist/swup.min.js"></script>
@@ -125,10 +132,11 @@
   <script>
     AOS.init();
   </script>
+  <div class="loader">
+    <div></div>
+    <div></div>
+  </div>
 </body>
-<div class="loader">
-  <div></div>
-  <div></div>
-</div>
+
 
 </html>
